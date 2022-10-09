@@ -1,9 +1,12 @@
 import create from "zustand";
 import { nanoid } from "nanoid";
 
+const getLocalStorage = (key) => JSON.parse(localStorage.getItem(key));
+const setLocalStorage = (key, val) => localStorage.setItem(key, JSON.stringify(val));
+
 export const useStore = create((set) => ({
   texture: 'dirt',
-  cubes: [{key: nanoid(), pos: [10,0.5,10], texture: 'dirt'}],
+  cubes: getLocalStorage('cubes') || [],
   addCube: (x,y,z) => {
     set((prev) => ({
       cubes: [...prev.cubes, {
@@ -23,6 +26,13 @@ export const useStore = create((set) => ({
       texture: text,
     }))
   },
-  saveWorld: () => {},
-  resetWorld: () => {},
+  saveWorld: () => {
+    set(prev => {
+      setLocalStorage('cubes', prev.cubes);
+      return prev;
+    })
+  },
+  resetWorld: () => {
+    set(() => ({cubes: []}))
+  },
 }))
