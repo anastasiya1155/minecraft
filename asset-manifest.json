@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/minecraft/static/css/main.a2fdbb06.css",
+    "main.js": "/minecraft/static/js/main.68659833.js",
+    "static/js/787.d24ff6f0.chunk.js": "/minecraft/static/js/787.d24ff6f0.chunk.js",
+    "index.html": "/minecraft/index.html",
+    "main.a2fdbb06.css.map": "/minecraft/static/css/main.a2fdbb06.css.map",
+    "main.68659833.js.map": "/minecraft/static/js/main.68659833.js.map",
+    "787.d24ff6f0.chunk.js.map": "/minecraft/static/js/787.d24ff6f0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2fdbb06.css",
+    "static/js/main.68659833.js"
+  ]
+}
